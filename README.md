@@ -10,3 +10,10 @@ A group project to create a travel information website which can supply the user
 - Stephen Clemmer
 - Timothee Odushina
 - Brian Sward
+
+## Resources
+
+### Plug Data Resources
+
+- [chart info obtained here](https://www.skyscanner.net/news/international-travel-plug-adapter-guide)
+- plugs.png is borrowed from their site used as well

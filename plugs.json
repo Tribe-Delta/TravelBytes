@@ -1,0 +1,1292 @@
+[
+  {
+    "Country": "Abu Dhabi",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Afghanistan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Albania",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Algeria",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "American Samoa",
+    "Adapter": "A, B, F, I",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Andorra",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Angola",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Anguilla",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Antigua & Barbuda",
+    "Adapter": "A, B",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Argentina",
+    "Adapter": "C, I",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Armenia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Aruba",
+    "Adapter": "A, B, F",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Australia",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Austria",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Azerbaijan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Azores",
+    "Adapter": "B, C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Bahamas",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Bahrain",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Balearic Islands",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Bangladesh",
+    "Adapter": "A, C, D, G, K",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Barbados",
+    "Adapter": "A, B",
+    "Voltage": "115 V"
+  },
+  {
+    "Country": "Belarus",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Belgium",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Belize",
+    "Adapter": "A, B, G",
+    "Voltage": "110 V / 220 V"
+  },
+  {
+    "Country": "Benin",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Bermuda",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Bhutan",
+    "Adapter": "C, D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Bolivia",
+    "Adapter": "A, C",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Bonaire",
+    "Adapter": "A, C",
+    "Voltage": "127 V"
+  },
+  {
+    "Country": "Bosnia & Herzegovina",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Botswana",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Brazil",
+    "Adapter": "C, N",
+    "Voltage": "127 V / 220 V"
+  },
+  {
+    "Country": "British Virgin Islands",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Brunei",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Bulgaria",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Burkina Faso",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Burma/Myanmar",
+    "Adapter": "A, C, D, G, I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Burundi",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Cambodia",
+    "Adapter": "A, C, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cameroon",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Canada",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Canary Islands",
+    "Adapter": "C, E, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cape Verde",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cayman Islands",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Central African Republic",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Chad",
+    "Adapter": "C, D, E, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Channel Islands",
+    "Adapter": "C, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Chile",
+    "Adapter": "C, L",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "China",
+    "Adapter": "A, C, I",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Christmas Island",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cocos Islands",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Colombia",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Comoros",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Congo, Democratic Republic",
+    "Adapter": "C, D, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Congo",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cook Islands",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Costa Rica",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Ivory Coast",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Croatia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cuba",
+    "Adapter": "A, B, C, L",
+    "Voltage": "110 V / 220 V"
+  },
+  {
+    "Country": "Curaçao",
+    "Adapter": "A, B",
+    "Voltage": "127 V"
+  },
+  {
+    "Country": "Cyprus",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Cyprus, North",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Czech Republic",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Denmark",
+    "Adapter": "C, E, F, K",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Djibouti",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Dominica",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Dominican Republic",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Dubai",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "East Timor",
+    "Adapter": "C, E, F, I",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Ecuador",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Egypt",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "El Salvador",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "England",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Equatorial Guinea",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Eritrea",
+    "Adapter": "C, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Estonia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Ethiopia",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Faeroe Islands",
+    "Adapter": "C, E, F, K",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Falkland Islands",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Fiji",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Finland",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "France",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "French Guiana",
+    "Adapter": "C, D, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Gabon",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Gambia",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Gaza Strip",
+    "Adapter": "C, H",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Georgia",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Germany",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Ghana",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Gibraltar",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Great Britain",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Greece",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Greenland",
+    "Adapter": "C, E, F, K",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Grenada",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Guadeloupe",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Guam",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Guatemala",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Guinea",
+    "Adapter": "C, F, K",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Guinea-Bissau",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Guyana",
+    "Adapter": "A, B, D, G",
+    "Voltage": "120 V / 240 V"
+  },
+  {
+    "Country": "Haiti",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Honduras",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Hong Kong",
+    "Adapter": "G",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Hungary",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Iceland",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "India",
+    "Adapter": "C, D, M",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Indonesia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Iran",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Iraq",
+    "Adapter": "C, D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Ireland",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Ireland, Northern",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Isle of Man",
+    "Adapter": "C, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Israel",
+    "Adapter": "C, H",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Italy",
+    "Adapter": "C, F, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Jamaica",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Japan",
+    "Adapter": "A, B",
+    "Voltage": "100 V"
+  },
+  {
+    "Country": "Jordan",
+    "Adapter": "C, D, F, G, J",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Kazakhstan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Kenya",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Kiribati",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Korea, North",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Korea, South",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Kosovo",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Kuwait",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Laos",
+    "Adapter": "A, B, C, E, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Latvia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Lebanon",
+    "Adapter": "C, D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Lesotho",
+    "Adapter": "M",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Liberia",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Libya",
+    "Adapter": "C, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Liechtenstein",
+    "Adapter": "C, J",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Lithuania",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Luxembourg",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Macau",
+    "Adapter": "G",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Macedonia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Madagascar",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Madeira",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Malawi",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Malaysia",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Maldives",
+    "Adapter": "C, D, G, J, K, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Mali",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Malta",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Marshall Islands",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Martinique",
+    "Adapter": "C, D, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Mauritania",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Mauritius",
+    "Adapter": "C, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Mayotte",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Mexico",
+    "Adapter": "A, B",
+    "Voltage": "127 V"
+  },
+  {
+    "Country": "Micronesia",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Moldova",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Monaco",
+    "Adapter": "C, E, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Mongolia",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Montenegro",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Montserrat",
+    "Adapter": "A, B",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Morocco",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Mozambique",
+    "Adapter": "C, F, M",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Namibia",
+    "Adapter": "D, M",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Nauru",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Nepal",
+    "Adapter": "C, D, M",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Netherlands",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "New Caledonia",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "New Zealand",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Nicaragua",
+    "Adapter": "A",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Niger",
+    "Adapter": "C, D, E, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Nigeria",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Niue",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Norfolk Island",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "North Cyprus",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Northern Ireland",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "North Korea",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Norway",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Oman",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Pakistan",
+    "Adapter": "C, D",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Palau",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Palestine",
+    "Adapter": "C, H",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Panama",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Papua New Guinea",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Paraguay",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Peru",
+    "Adapter": "A, C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Philippines",
+    "Adapter": "A, B, C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Pitcairn Islands",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Poland",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Portugal",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Puerto Rico",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Qatar",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Réunion",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Romania",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Russia",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Rwanda",
+    "Adapter": "C, J",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Saba",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Saint Barthélemy",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Saint Kitts and Nevis",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Saint Lucia",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Saint Martin",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Saint Helena",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Sint Eustatius",
+    "Adapter": "A, B, C, F",
+    "Voltage": "110 V / 220 V"
+  },
+  {
+    "Country": "Sint Maarten",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Saint Vincent & Grenadines",
+    "Adapter": "A, B, G",
+    "Voltage": "110 V / 230 V"
+  },
+  {
+    "Country": "Samoa",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "San Marino",
+    "Adapter": "C, F, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "São Tomé & Príncipe",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Scotland",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Senegal",
+    "Adapter": "C, D, E, K",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Serbia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Seychelles",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Sierra Leone",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Singapore",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Slovakia",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Slovenia",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Solomon Islands",
+    "Adapter": "G, I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Somalia",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Somaliland",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "South Africa",
+    "Adapter": "C, D, M, N",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "South Korea",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "South Sudan",
+    "Adapter": "C, D",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Spain",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Sri Lanka",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Sudan",
+    "Adapter": "C, D",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Suriname",
+    "Adapter": "A, B, C, F",
+    "Voltage": "127 V / 230 V"
+  },
+  {
+    "Country": "Swaziland",
+    "Adapter": "M",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Sweden",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Switzerland",
+    "Adapter": "C, J",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Syria",
+    "Adapter": "C, E, L",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Tahiti",
+    "Adapter": "C, E",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Taiwan",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Tajikistan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Tanzania",
+    "Adapter": "D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Thailand",
+    "Adapter": "A, B, C, O",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Togo",
+    "Adapter": "C",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Tokelau",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Tonga",
+    "Adapter": "I",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Trinidad & Tobago",
+    "Adapter": "A, B",
+    "Voltage": "115 V"
+  },
+  {
+    "Country": "Tunisia",
+    "Adapter": "C, E",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Turkey",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Turkmenistan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Turks & Caicos Islands",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Tuvalu",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Uganda",
+    "Adapter": "G",
+    "Voltage": "240 V"
+  },
+  {
+    "Country": "Ukraine",
+    "Adapter": "C, F",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "United Kingdom",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "United States of America",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "United States Virgin Islands",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Uruguay",
+    "Adapter": "C, F, L",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Uzbekistan",
+    "Adapter": "C, F",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Vanuatu",
+    "Adapter": "I",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Vatican City",
+    "Adapter": "C, F, L",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Venezuela",
+    "Adapter": "A, B",
+    "Voltage": "120 V"
+  },
+  {
+    "Country": "Vietnam",
+    "Adapter": "A, C, D",
+    "Voltage": "220 V"
+  },
+  {
+    "Country": "Virgin Islands, British",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Virgin Islands, United States",
+    "Adapter": "A, B",
+    "Voltage": "110 V"
+  },
+  {
+    "Country": "Wales",
+    "Adapter": "G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Yemen",
+    "Adapter": "A, D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Zambia",
+    "Adapter": "C, D, G",
+    "Voltage": "230 V"
+  },
+  {
+    "Country": "Zimbabwe",
+    "Adapter": "D, G",
+    "Voltage": "240 V"
+  }
+ ]
