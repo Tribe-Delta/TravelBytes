@@ -11,6 +11,10 @@ A group project to create a travel information website which can supply the user
 - Timothee Odushina
 - Brian Sward
 
+## Data Flow
+
+![Data Flow](./img/TravelBytesFlow.jpg)
+
 ## Resources
 
 ### Plug Data Resources
