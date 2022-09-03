@@ -15,6 +15,13 @@ A group project to create a travel information website which can supply the user
 
 ![Data Flow](./img/TravelBytesFlow.jpg)
 
+## Wireframes
+[Home Page](https://wireframe.cc/gGveoX)
+![Home Page](./img/HomePageWire.png)
+
+[About Us](https://wireframe.cc/GbVnTK)
+![About Us](./img/AboutUsWire.png)
+
 ## Resources
 
 ### Plug Data Resources
