@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { Auth0Provider } from "@auth0/auth0-react";
 import App from './App';
 
