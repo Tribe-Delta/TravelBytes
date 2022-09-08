@@ -22,14 +22,13 @@ class App extends React.Component {
     }
   }
 
-
  async componentDidMount(){
    setTimeout(() => {
       this.getSavedLocations();
     }, 1000);
   }
 
- 
+
   async getSavedLocations() {
     try{
       if(this.props.auth0.isAuthenticated){
@@ -94,49 +93,43 @@ class App extends React.Component {
     }
   }
 
+  handleLocationDelete = async (locationToDelete) => {
+    try {
+      if (this.props.auth0.isAuthenticated) {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
 
+        let testPacket = {
+          id: this.props._id
+        }
 
-  // handleLocationDelete = async (locationToDelete) => {
-  //   try {
-  //     if (this.props.auth0.isAuthenticated) {
-  //       const res = await this.props.auth0.getIdTokenClaims();
-  //       const jwt = res.__raw;
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          method: 'DELETE',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/location',
+          data: testPacket
+        }
 
-  //       let testPacket = {
-  //         id: this.props._id
-  //       }
+        const locationResponse = await axios(config);
 
-  //       const config = {
-  //         headers: { "Authorization": `Bearer ${jwt}` },
-  //         method: 'DELETE',
-  //         baseURL: process.env.REACT_APP_SERVER,
-  //         url: '/location',
-  //         data: testPacket
-  //       }
+        console.log(locationResponse.status);
 
-  //       const locationResponse = await axios(config);
+        const filteredLocations = this.state.locations.filter(location => {
+          return location._id !== locationToDelete._id;
+        })
 
-  //       console.log(locationResponse.status);
+        this.setState({
+          locations: filteredLocations
+        })
 
-  //       const filteredLocations = this.state.locations.filter(location => {
-  //         return location._id !== locationToDelete._id;
-  //       })
+        this.getSavedLocations();
+      }
 
-  //       this.setState({
-  //         locations: filteredLocations
-  //       })
-
-  //       this.getSavedLocations();
-  //     }
-
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-
-
-
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   render() {
     console.log(this.props.auth0);
