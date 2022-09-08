@@ -15,7 +15,7 @@ class Flag extends React.Component {
       <Container>
         <Image
         // src will be the data that comes, rendered per country
-          src='https://flagcdn.com/mt.svg'
+          src={this.props.flagLocation}
           className='img-fluid shadow-2-strong'
           // alt text will be passed by props as an object literal, as `${country} flag`
           alt='this.props.${}'

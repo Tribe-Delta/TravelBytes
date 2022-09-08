@@ -15,12 +15,13 @@ import axios from 'axios';
 
 class App extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       locations: []
     }
   }
+
 
  async componentDidMount(){
    setTimeout(() => {
@@ -28,6 +29,7 @@ class App extends React.Component {
     }, 1000);
   }
 
+ 
   async getSavedLocations() {
     try{
       if(this.props.auth0.isAuthenticated){
@@ -52,6 +54,7 @@ class App extends React.Component {
     }
   }
 
+  
   handleUpdateNote = async(noteToUpdate) => {
     try {
       if(this.props.auth0.isAuthenticated){
@@ -91,46 +94,54 @@ class App extends React.Component {
     }
   }
 
-  handleLocationDelete = async (locationToDelete) => {
-    try {
-      if(this.props.auth0.isAuthenticated){
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
 
-        let testPacket = {
-          id: this.props._id
-        }
 
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'DELETE',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-          data: testPacket
-        }
-        
-        const locationResponse = await axios(config);
-      
-        console.log(locationResponse.status);
+  // handleLocationDelete = async (locationToDelete) => {
+  //   try {
+  //     if (this.props.auth0.isAuthenticated) {
+  //       const res = await this.props.auth0.getIdTokenClaims();
+  //       const jwt = res.__raw;
 
-        const filteredLocations = this.state.locations.filter(location => {
-          return location._id !== locationToDelete._id;
-        })
+  //       let testPacket = {
+  //         id: this.props._id
+  //       }
 
-        this.setState({
-          locations: filteredLocations
-        })      
+  //       const config = {
+  //         headers: { "Authorization": `Bearer ${jwt}` },
+  //         method: 'DELETE',
+  //         baseURL: process.env.REACT_APP_SERVER,
+  //         url: '/location',
+  //         data: testPacket
+  //       }
 
-        this.getSavedLocations();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //       const locationResponse = await axios(config);
+
+  //       console.log(locationResponse.status);
+
+  //       const filteredLocations = this.state.locations.filter(location => {
+  //         return location._id !== locationToDelete._id;
+  //       })
+
+  //       this.setState({
+  //         locations: filteredLocations
+  //       })
+
+  //       this.getSavedLocations();
+  //     }
+
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+
+
+
 
   render() {
     console.log(this.props.auth0);
     let mapLocations = this.state.locations.map((location) => (
+
       <PlaceCard 
         key={location._id}
         location={location}
@@ -140,7 +151,7 @@ class App extends React.Component {
     ));
     return (
       <div className="App">
-        {this.props.auth0.isAuthenticated ? 
+        {this.props.auth0.isAuthenticated ?
           <>
             <Header />
             <Routes>
@@ -149,8 +160,8 @@ class App extends React.Component {
                 <>
                   <Profile />
                   <Logout />
-                  <br/>
-                  <br/>
+                  <br />
+                  <br />
                   <Map />
                   {this.state.locations.length ? (
                     <div className="location-cnt">
@@ -160,7 +171,7 @@ class App extends React.Component {
                     <h3>No Saved Locations</h3>
                   )}
                 </>
-              }/>
+              } />
             </Routes>
           </>
           :

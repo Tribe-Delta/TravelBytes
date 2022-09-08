@@ -7,7 +7,7 @@ import RenderMap from './RenderMap.js';
 import Flag from './Flag.js';
 import TextArea from './TextArea.js';
 import "./PlaceCard.css";
-import axios from 'axios';
+// import axios from 'axios';
 
 class PlaceCard extends React.Component {
   
@@ -20,18 +20,21 @@ class PlaceCard extends React.Component {
       <div className="content-container">
       <div className="row">
           <div className="left-panel box">
-              <h3>Valetta, Malta</h3>
+              <h3>{this.props.location.city}, {this.props.location.state}, {this.props.location.country}</h3>
               <ul>
-                <li>`timezone: $timezone`</li>
-                <li>`$currencySymbol $currencyName`</li>
-                <li>`$firstLanguage`</li>
-                <li>`$secondLanguage`</li>
+                <li>Timezone: {this.props.location.timezone}</li>
+                <li>Currency: {this.props.location.currencySymbol}, {this.props.location.currency}</li>
+                <li>Languages: {this.props.location.firstLanguage}, {this.props.location.secondLanguage}</li>
               </ul>
-              <Flag />
+              <Flag 
+              flagLocation={this.props.location.flag}
+              />
           </div>
           <div className="middle-panel box">
               <Container>
-                <RenderMap />
+                <RenderMap 
+                mapLocation={this.props.location}
+                />
               </Container>
           </div>
           <div className="right-panel box">
