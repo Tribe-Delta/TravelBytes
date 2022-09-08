@@ -1,0 +1,137 @@
+body {
+  background: radial-gradient(ellipse at center, #ffffff 0%, #5C7373 100%);
+}
+.container {
+  margin: 10vh auto;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main {
+  display: flex;
+  margin: 0.5em;
+  transition: 0.5s all ease;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+  width: 33.3%;
+  min-width: 200px;
+  max-width: 350px;
+  height: 410px;
+  box-shadow: 1px 1px 5px #011f26;
+}
+.main .front,
+.main .back {
+  background: #027368;
+  position: absolute;
+  width: 100%;
+  min-width: 200px;
+  max-width: 350px;
+  height: 410px;
+  transition: 0.5s all ease;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+.main .front .data-wrapper,
+.main .back .data-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  background: #fff;
+  color: #ccc;
+}
+.main .front .data-wrapper .data,
+.main .back .data-wrapper .data {
+  color: #011f26;
+  width: 80%;
+  margin: 2em auto;
+}
+.main .front .data-wrapper .data .title,
+.main .back .data-wrapper .data .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.main .front .data-wrapper .circle,
+.main .back .data-wrapper .circle {
+  color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  background: #5d5d5d;
+  top: -1.5em;
+  left: 40%;
+}
+.main .icon {
+  font-size: 10em;
+  padding: 0.2em 0 0 0;
+}
+.main .front {
+  text-align: center;
+  color: #fff;
+}
+.main .back {
+  color: #fff;
+  transform: rotateY(180deg);
+}
+.main .back .social {
+  width: auto;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+.main .back .social i {
+  margin: 5px;
+}
+.main .back .skills {
+  margin: 0 auto;
+  text-align: center;
+  padding: 1.5em;
+}
+.main .back .skills .skill-ele {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.main .back .skills .skill-ele:hover .stars {
+  left: 0;
+}
+.main .back .skills .skill-ele .stars {
+  transition: 0.5s all ease;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #545353;
+  position: absolute;
+  left: -100%;
+  color: #ffd700;
+}
+.main:hover .front {
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+.main:hover .back {
+  transform: rotateY(0deg);
+}
+
+.fa-github{
+  color:#034001;
+} 
+
+.fa-linkedin-square{
+  color:#034001;
+}
+
+a {
+  color:#034001;
+}
+
+.smile {
+  border-radius: 0 0 3px 3px;
+}
