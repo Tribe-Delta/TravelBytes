@@ -11,12 +11,44 @@ import { Route, Routes } from "react-router-dom";
 import About from './component/About.js';
 import Header from './component/Header.js';
 import './css/App.css';
-// import Flag from './component/Flag.js';
-// import RenderMap from './component/RenderMap.js';
-// import LocationList from './component/LocationList.js';
 import PlaceCard from './component/PlaceCard.js';
-// import TextArea from './component/TextArea.js';
 
+handleLocationDelete = async (locationToDelete) => {
+  try {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+
+      let testPacket = {
+        id: this.props._id
+      }
+
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'DELETE',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
+        data: testPacket
+      }
+      
+      const locationResponse = await axios(config);
+     
+      console.log(locationResponse.status);
+
+      const filteredLocations = this.state.locations.filter(location => {
+        return location._id !== locationToDelete._id;
+      })
+
+      this.setState({
+        locations: filteredLocations
+      })
+      
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 class App extends React.Component {
   render() {
@@ -35,7 +67,11 @@ class App extends React.Component {
                 <br/>
                 <Map />
                 <SavedLocations />
-                <PlaceCard />
+                <PlaceCard 
+                locations={this.state.locations}
+                handleDelete={this.handleDelete}
+                updateLocations={this.updateLocations}
+                />
                 </>
               }/>
             </Routes>

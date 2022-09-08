@@ -1,19 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import "./styles.css";
-// import { Row } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-// import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import RenderMap from './RenderMap.js';
-// import LocationList from './LocationList.js';
+import RenderMap from './RenderMap.js'; 
 import Flag from './Flag.js';
 import TextArea from './TextArea.js';
-import "./PlaceCard.css"
+import "./PlaceCard.css";
+import axios from 'axios';
 
 class PlaceCard extends React.Component {
   
+
+
+
+
   render() {
     return (
       <div className="content-container">
