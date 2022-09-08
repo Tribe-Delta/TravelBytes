@@ -26,6 +26,8 @@ class App extends React.Component {
                 <>
                 <Profile />
                 <Logout />
+                <br/>
+                <br/>
                 <Map />
                 <SavedLocations />
                 </>
