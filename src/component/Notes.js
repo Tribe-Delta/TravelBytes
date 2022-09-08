@@ -14,26 +14,34 @@ class Notes extends React.Component{
       const jwt = res.__raw;
       // console.log('token for thunderclient: ', jwt);
       
-      console.log(event.target.elements.formNotes.value);
+      // console.log(event.target.elements.formNotes.value);
+      let testPacket = {
+        cityName: this.props.cityName,
+        notes: event.target.elements.formNotes.value
+      }
 
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'post',
+        method: 'POST',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/location'
+        url: '/location',
+        data: testPacket
       }
 
-      console.log(this.props.cityName);
+      console.log('Save Submit City: ', this.props.cityName, 'Typeof:');
+      console.log('Save Submit Notes: ', event.target.elements.formNotes.value);
 
-      const locationResponse = await axios(
-        config,
-         {
-          cityName: this.props.cityName,
-          notes: event.target.elements.formNotes.value
-        });
-      console.log('Post Response:', locationResponse.data);
+      
+
+      console.log(testPacket);
+      
+      const locationResponse = await axios(config);
+      // console.log('Post Response:', locationResponse.data);
     }
   }
+
+  // await axios.post(url, {cityName: this.state.cityName })
+
 // async componentDidMount() {
 //     if(this.props.auth0.isAuthenticated){
 //       const res = await this.props.auth0.getIdTokenClaims();

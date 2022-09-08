@@ -50,7 +50,7 @@ class SearchForm extends React.Component{
       key={idx} 
       lng={li.center[0]} 
       lat={li.center[1]}
-      cityName={li.place_name}
+      cityname={li.place_name}
       action onClick={this.handleListItemClick}
       >
         {li.place_name} 
