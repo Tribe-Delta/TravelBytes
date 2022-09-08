@@ -1,8 +1,10 @@
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import RenderMap from './RenderMap.js';
+import RenderMap from './RenderMap.js'; 
 import Flag from './Flag.js';
 import TextArea from './TextArea.js';
 import "../css/PlaceCard.css"
@@ -14,18 +16,21 @@ class PlaceCard extends React.Component {
       <div className="container">
         <div className="row">
             <div className="left-panel box">
-                <h3>Valetta, Malta</h3>
+                <h3>{this.props.location.city}, {this.props.location.state}, {this.props.location.country}</h3>
                 <ul>
-                  <li>`timezone: $timezone`</li>
-                  <li>`$currencySymbol $currencyName`</li>
-                  <li>`$firstLanguage`</li>
-                  <li>`$secondLanguage`</li>
-                </ul>
-                <Flag />
+                <li>Timezone: {this.props.location.timezone}</li>
+                <li>Currency: {this.props.location.currencySymbol}, {this.props.location.currency}</li>
+                <li>Languages: {this.props.location.firstLanguage}, {this.props.location.secondLanguage}</li>
+              </ul>
+                <Flag 
+                  flagLocation={this.props.location.flag}
+                />
             </div>
             <div className="middle-panel box">
                 <Container>
-                  <RenderMap />
+                 <RenderMap 
+                mapLocation={this.props.location}
+                />
                 </Container>
             </div>
             <div className="right-panel box">
@@ -34,12 +39,13 @@ class PlaceCard extends React.Component {
                 </div>
                 
                 <div className='button-box'>
-                  <Button className='note-button'>Save Note</Button>
-                  <Button className='note-button'>Delete Location</Button>
+                  <Button className='note-button' onClick={ () => this.props.handleUpdateNote(this.props.location)}>Save Note</Button>
+                  <Button className='note-button'onClick={ () => this.props.handleLocationDelete(this.props.location)}>Delete Location</Button>
                 </div>
             </div>
         </div>
       </div>
+
     );
   }
 }

@@ -28,7 +28,6 @@ class TextArea extends React.Component {
               padding='0' />
           </Form>
         </Form.Group>
-        
       </Container>
     );
   }

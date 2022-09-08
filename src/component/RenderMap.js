@@ -16,7 +16,7 @@ class RenderMap extends React.Component {
       <>
         <Image
         // src will be the data that comes, rendered per country
-        src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=35.9375,14.3754&zoom=11`}
+        src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.mapLocation.latitude},${this.props.mapLocation.longitude}&zoom=11`}
         
          className = 'img-fluid'
         // alt text will be passed by props as an object literal, as `${country} flag`
