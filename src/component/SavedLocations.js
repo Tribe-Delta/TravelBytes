@@ -1,42 +1,42 @@
 import React from "react";
 import axios from 'axios';
-import {withAuth0} from '@auth0/auth0-react';
-class Content extends React.Component{
+import { withAuth0 } from '@auth0/auth0-react';
+
+class SavedLocations extends React.Component{
 
   constructor(props){
     super(props);
     this.state = {
-      items: []
+      locations: []
     }
   }
 
   async componentDidMount() {
     if(this.props.auth0.isAuthenticated){
-      const res = await this.props.auth0.getIDTokenClaims();
+      const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
 
-
       //Use this to get token for thunderclient
-      console.log('token: ', jwt);
+      console.log('token for thunderclient: ', jwt);
 
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/authtest'
+        url: '/location'
       }
+      
+      console.log(config);
+      const locationResponse = await axios(config);
 
-      const authtestResponse = await axios(config);
-
-      console.log('Response: ', authtestResponse.data);
+      console.log('Response: ', locationResponse.data);
 
       this.setState({
-        items: authtestResponse.data
+        locations: locationResponse.data
       });
     }
   }
 
-  
   render(){
     return(
       <>
@@ -46,4 +46,4 @@ class Content extends React.Component{
   }
 }
 
-export default withAuth0(Content);
+export default withAuth0(SavedLocations);

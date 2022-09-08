@@ -24,29 +24,41 @@ class SearchForm extends React.Component{
         return searchResult;
       });
 
-      filteredList.length ? this.setState({listItems: filteredList}) : this.setState({listItems: []}); 
+    filteredList.length ? this.setState({listItems: filteredList}) : this.setState({listItems: []}); 
   }
 
-
-
   handleListItemClick = async(event) => {
+    // console.log('Location Clicked: ', event.target.attributes.cityname.textContent);
+    // console.log('ListItems:', this.state.listItems);
     event.preventDefault();
-    console.log(this.state.listItems);
-    console.log(this.state.listItems[0].center);
-    console.log(event.target.attributes.lat);
-    console.log(event.target.attributes.lng);
+
+    // this.setState = ({
+    //   cityName: event.target.attributes.cityname.textContent
+    // });
+
+    this.props.updateSelectedCity(event.target.attributes.cityname.textContent);
+
+    this.props.updateMap(
+      event.target.attributes.lng.value, 
+      event.target.attributes.lat.value
+    );
   }
 
   render(){
     let list = this.state.listItems.map((li, idx) => 
-          <ListGroup.Item key={idx} lng={li.center[0]} lat={li.center[1]} action onClick={this.handleListItemClick}>
-          {li.place_name}
-          </ListGroup.Item>
+      <ListGroup.Item 
+      key={idx} 
+      lng={li.center[0]} 
+      lat={li.center[1]}
+      cityName={li.place_name}
+      action onClick={this.handleListItemClick}
+      >
+        {li.place_name} 
+      </ListGroup.Item>
     );
 
     return(
       <div className="master-form">
-
         <Form>
           <Form.Control size="lg" type="text" placeholder="Large text" onChange={this.handleOnChange} />
         </Form>
@@ -58,9 +70,7 @@ class SearchForm extends React.Component{
         ) : ( 
           <h3>No Searches</h3>
         )}
-
       </div>
-      
     )
   }
 }
