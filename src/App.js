@@ -13,6 +13,15 @@ import './css/App.css';
 import PlaceCard from './component/PlaceCard.js';
 import axios from 'axios';
 
+class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      locations: []
+    }
+  }
+
 
 handleLocationDelete = async (locationToDelete) => {
   try {
@@ -49,15 +58,44 @@ handleLocationDelete = async (locationToDelete) => {
     console.log(error);
   }
 }
+// ____________Start Stephen's Update Function___________
+handleUpdateNote = async(noteToUpdate) => {
+  try {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
 
-class App extends React.Component {
+      let testPacket = {
+        id: this.props._id
+      }
 
-  constructor(props){
-    super(props);
-    this.state = {
-      locations: []
-    }
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'PUT',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
+        data: testPacket
+      }
+      
+      const locationResponse = await axios(config);
+     
+      console.log(locationResponse.status);
+    
+      let updatedLocationArray = this.state.locations.map(existingLocation => {
+        return existingLocation._id === noteToUpdate._id
+        ? locationResponse.data
+        : existingLocation
+      });
+      this.setState({
+        locations: updatedLocationArray
+      });
+    } 
+  }catch(error){
+    console.log('error in updateLocation', error.response);
   }
+}
+    
+// ____________ End Stephen's Update Function__________________
 
   componentDidMount(){
     this.getSavedLocations();
@@ -69,7 +107,7 @@ class App extends React.Component {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
 
-      //Use this to get token for thunderclient
+      //Use this to get token for thunderclient 
       //console.log('token for thunderclient: ', jwt);
 
       const config = {
@@ -80,7 +118,7 @@ class App extends React.Component {
       }
       
       const locationResponse = await axios(config);
-
+ 
       console.log('Response: ', locationResponse.data);
 
       this.setState({
@@ -92,7 +130,7 @@ class App extends React.Component {
   render() {
     let mapLocations = this.state.locations.map((location) => (
       <PlaceCard 
-        location={this.state.location}
+        location={location}
         handleDelete={this.handleDelete}
         updateLocations={this.updateLocations}
       />
