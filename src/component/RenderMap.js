@@ -1,7 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+import '../css/RenderMap.css';
 
 class RenderMap extends React.Component {
   constructor(props) {

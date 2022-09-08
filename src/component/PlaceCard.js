@@ -1,77 +1,47 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import "./styles.css";
-// import { Row } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-// import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import RenderMap from './RenderMap.js';
-// import LocationList from './LocationList.js';
 import Flag from './Flag.js';
 import TextArea from './TextArea.js';
-import "./PlaceCard.css"
+import "../css/PlaceCard.css"
 
 class PlaceCard extends React.Component {
   
   render() {
     return (
-      <div className="content-container">
-      <div className="row">
-          <div className="left-panel box">
-              <h3>Valetta, Malta</h3>
-              <ul>
-                <li>`timezone: $timezone`</li>
-                <li>`$currencySymbol $currencyName`</li>
-                <li>`$firstLanguage`</li>
-                <li>`$secondLanguage`</li>
-              </ul>
-              <Flag />
-          </div>
-          <div className="middle-panel box">
-              <Container>
-                <RenderMap />
-              </Container>
-          </div>
-          <div className="right-panel box">
-              <Container style={{ display: "inline" }}>
-              <Button >Delete Location</Button>
+      <div className="container">
+        <div className="row">
+            <div className="left-panel box">
+                <h3>Valetta, Malta</h3>
+                <ul>
+                  <li>`timezone: $timezone`</li>
+                  <li>`$currencySymbol $currencyName`</li>
+                  <li>`$firstLanguage`</li>
+                  <li>`$secondLanguage`</li>
+                </ul>
+                <Flag />
+            </div>
+            <div className="middle-panel box">
+                <Container>
+                  <RenderMap />
                 </Container>
-                <Container style={{ display: "inline" }}>
-              <Button>Save Note</Button>
-              </Container>
-              <TextArea  />
-          </div>
-     </div>
-  </div>
-        
-        
-      //   <Container className="content-container">
-      //   <Row className="row">
-          
-      //     <LocationList className="left-panel"/>
-      //     <RenderMap className="middle-panel"/>
-      //     <TextArea className="right-panel"/>
-         
-      //   </Row>
-      // </Container>
-
+            </div>
+            <div className="right-panel box">
+                <div>
+                  <TextArea className='note-box'  />
+                </div>
+                
+                <div className='button-box'>
+                  <Button className='note-button'>Save Note</Button>
+                  <Button className='note-button'>Delete Location</Button>
+                </div>
+            </div>
+        </div>
+      </div>
     );
   }
 }
-
-
-// export default function App() {
-//   return (
-//   );
-// }
-
-// const Comp1 = () => {
-//   return <Col md={1}>Hello world</Col>;
-// };
-
-// const Comp2 = () => {
-//   return <Col md={11}>Foobar</Col>;
-// };
 
 export default PlaceCard;
