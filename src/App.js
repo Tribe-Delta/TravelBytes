@@ -14,6 +14,42 @@ import PlaceCard from './component/PlaceCard.js';
 import axios from 'axios';
 
 
+handleLocationDelete = async (locationToDelete) => {
+  try {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+
+      let testPacket = {
+        id: this.props._id
+      }
+
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'DELETE',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
+        data: testPacket
+      }
+      
+      const locationResponse = await axios(config);
+     
+      console.log(locationResponse.status);
+
+      const filteredLocations = this.state.locations.filter(location => {
+        return location._id !== locationToDelete._id;
+      })
+
+      this.setState({
+        locations: filteredLocations
+      })      
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 class App extends React.Component {
 
   constructor(props){
@@ -55,7 +91,11 @@ class App extends React.Component {
 
   render() {
     let mapLocations = this.state.locations.map((location) => (
-      <PlaceCard location={this.state.location}/>
+      <PlaceCard 
+        location={this.state.location}
+        handleDelete={this.handleDelete}
+        updateLocations={this.updateLocations}
+      />
     ));
     return (
       <div className="App">
