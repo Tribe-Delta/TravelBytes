@@ -1,11 +1,14 @@
 body {
   background: radial-gradient(ellipse at center, #ffffff 0%, #5C7373 100%);
 }
-.container {
-  margin: 10vh auto;
-  justify-content: center;
+.container-about {
+  justify-content: space-around;
   display: flex;
   flex-flow: row wrap;
+  background-color: #5c7373;
+  border-radius: 20px;
+  padding: 50px;
+  width: 855px;
 }
 .main {
   display: flex;

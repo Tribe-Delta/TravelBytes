@@ -47,23 +47,22 @@ class Map extends React.Component {
       cityName: cityName
     });
   }
-  // handleCreateLocation = async (mapData) => {
-  //   try {
-  //     const response = await axios.post(`${process.env.REACT_APP_SERVER}/mapdata`, mapData);
-  //     const newLocation = response.data;
-  //     //this.props.updateBookState(newLocation);
-  //   } catch (error){
-  //     console.log('Error when posting mapdata: ', error.response)
-  //   }
-  // };
 
   render() {
     return (
-      <div className='map-cnt'>
-        <SearchForm updateMap={this.updateMap} updateSelectedCity={this.updateSelectedCity}/>
+      <div className='map-home'>
+        <div className='search'>
+          <SearchForm updateMap={this.updateMap} updateSelectedCity={this.updateSelectedCity}/>
+        </div>
+
         <div ref={this.mapContainer} className="map-container" />
+        
+        <div className='note-box'>
         <Notes cityName={this.state.cityName} />
+        </div>
+
       </div>
+  
     );
   }
 }

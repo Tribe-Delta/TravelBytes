@@ -11,7 +11,7 @@ class About extends React.Component
 {
 render(){
   return (
-    <div className="container">
+    <div className="container-about">
     <div className="main">
         <div className="front green">
         <img className="smile" src={dan} alt="Dan's charming face" height="45%"></img>
@@ -19,8 +19,8 @@ render(){
             <div className="data-wrapper">
                 <div className="circle"><i className="fa fa-code"></i></div>
                 <div className="data">
-                    <span className="title">Full-Stack Developer</span>
-                    <p>Hobbies:</p>
+                    <span className="title">Software Engineer</span>
+                    <p>Hobbies: Game Development, Clay Modeling, Movies</p>
                 </div>
             </div>
         </div>
@@ -65,10 +65,8 @@ render(){
                 <div className="skill-ele">
                     <div className="stars">
                         <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span className="tech">New Skill</span>
+                    <span className="tech">Time Travel</span>
                 </div>
             </div>
             <div className="social">
@@ -88,8 +86,8 @@ render(){
             <div className="data-wrapper">
                 <div className="circle"><i className="fa fa-code"></i></div>
                 <div className="data">
-                    <span className="title">Full-Stack Developer</span>
-                    <p>Hobbies: </p>
+                    <span className="title">Software Developer</span>
+                    <p>Hobbies: Music, Dancing, Movies</p>
                 </div>
             </div>
         </div>
@@ -102,35 +100,23 @@ render(){
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span className="tech">Java Core</span>
+                    <span className="tech">HTML</span>
                 </div>
                <div className="skill-ele">
                    <div className="stars">
                        <i className="fa fa-star" aria-hidden="true"></i>
                        <i className="fa fa-star" aria-hidden="true"></i>
                        <i className="fa fa-star" aria-hidden="true"></i>
-                       <i className="fa fa-star" aria-hidden="true"></i>
-                       <i className="fa fa-star" aria-hidden="true"></i>
                    </div>
-                    <span className="tech">CSS3</span>
-                </div>
-                <div className="skill-ele">
-                    <div className="stars">
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                    </div>
                     <span className="tech">JavaScript</span>
                 </div>
                 <div className="skill-ele">
                     <div className="stars">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span className="tech">Django</span>
+                    <span className="tech">CSS</span>
                 </div>
                 <div className="skill-ele">
                     <div className="stars">
@@ -138,7 +124,17 @@ render(){
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span className="tech">New Skill</span>
+                    <span className="tech">ReactJS</span>
+                </div>
+                <div className="skill-ele">
+                    <div className="stars">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span className="tech">Lasagne</span>
                 </div>
             </div>
             <div className="social">
@@ -159,7 +155,7 @@ render(){
                 <div className="circle"><i className="fa fa-code"></i></div>
                 <div className="data">
                     <span className="title">Full-Stack Developer</span>
-                    <p>Hobbies: </p>
+                    <p>Hobbies: Pétanque, Fatherhood</p>
                 </div>
             </div>
         </div>
@@ -172,7 +168,7 @@ render(){
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span className="tech">React</span>
+                    <span className="tech">ReactJS</span>
                 </div>
                <div className="skill-ele">
                    <div className="stars">
@@ -237,7 +233,7 @@ render(){
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
-                        <i classNameName="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <span className="tech">Excel/Google Sheets</span>

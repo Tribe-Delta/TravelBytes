@@ -1,3 +1,8 @@
 .user_photo {
-  border-radius: 5px;
+  border-radius: 10px;
+  height: 1em;
+}
+
+.profile-container {
+  justify-content: right;
 }

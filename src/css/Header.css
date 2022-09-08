@@ -1,5 +1,6 @@
-.header_h1 {
-
+.header-root {
+  display: flex;
+  justify-content: space-between;
 }
 .header_ul {
   list-style-type: none;
@@ -10,4 +11,8 @@
 
 .header_li {
   padding-right: 10px;
+}
+
+.profile-holder {
+  justify-content: right;
 }
