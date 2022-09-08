@@ -22,39 +22,15 @@ class Map extends React.Component {
     this.mapContainer = React.createRef();
   }
 
-  async componentDidMount() {
-    const map = new mapboxgl.Map({
-    container: this.mapContainer.current,
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [this.state.lng, this.state.lat],
-    zoom: this.state.zoom,
+  componentDidMount(){
+      const map = new mapboxgl.Map({
+      container: this.mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [this.state.lng, this.state.lat],
+      zoom: this.state.zoom,
     });
-    
-    if(this.props.auth0.isAuthenticated){
-      const res = await this.props.auth0.getIdTokenClaims();
-      const jwt = res.__raw;
-
-      //Use this to get token for thunderclient
-      //console.log('token for thunderclient: ', jwt);
-
-      const config = {
-        headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'get',
-        baseURL: process.env.REACT_APP_SERVER,
-        url: '/location',
-        // data: 
-      }
-      
-      console.log('Config', config.user);
-      const locationResponse = await axios(config);
-
-      console.log('Response: ', locationResponse.data);
-
-      this.setState({
-        locations: locationResponse.data
-      });
-    }
   }
+  
 
   updateMap = (lng, lat) => {
     const map = new mapboxgl.Map({
