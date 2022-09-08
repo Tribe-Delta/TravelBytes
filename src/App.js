@@ -11,11 +11,8 @@ import { Route, Routes } from "react-router-dom";
 import About from './component/About.js';
 import Header from './component/Header.js';
 import './css/App.css';
-// import Flag from './component/Flag.js';
-// import RenderMap from './component/RenderMap.js';
-// import LocationList from './component/LocationList.js';
 import PlaceCard from './component/PlaceCard.js';
-// import TextArea from './component/TextArea.js';
+
 
 
 class App extends React.Component {
