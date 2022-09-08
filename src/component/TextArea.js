@@ -15,17 +15,19 @@ class TextArea extends React.Component {
   render() {
     return (
       <Container>
-        <Form className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Control 
-            placeholder="notes" 
-            as="textarea" 
-            cols={500}
-            rows={10}
-            class='form-control'
-            margin='0'
-            margin-top='0'
-            padding='0' />
-        </Form>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form className="mb-3">
+              <Form.Control 
+              placeholder="notes" 
+              as="textarea" 
+              cols={500}
+              rows={10}
+              className='form-control'
+              margin='0'
+              margin-top='0'
+              padding='0' />
+          </Form>
+        </Form.Group>
       </Container>
     );
   }
