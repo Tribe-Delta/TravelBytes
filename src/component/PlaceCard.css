@@ -1,0 +1,32 @@
+.content-container {
+  padding: 1.5%;
+  height: 70vh;
+  background-color: black;
+  font-size: 12;
+}
+.right-panel {
+  display: inline-block;
+  background-color: #5c7373;
+  width: 50%;
+  font-size: 16;
+  color: white;
+}
+.middle-panel {
+  display: inline-block;
+  background-color: #5c7373;
+  width: 30%;
+}
+.left-panel {
+  display: inline-block;
+  background-color: #5c7373;
+  width: 20%;
+  color: white;
+}
+.box {
+  /* border: 1px solid black; */
+}
+
+.row {
+  display: flex;
+  /* height: 100%; */
+}
