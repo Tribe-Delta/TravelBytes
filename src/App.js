@@ -13,22 +13,95 @@ import './css/App.css';
 import PlaceCard from './component/PlaceCard.js';
 import axios from 'axios';
 
-
 class App extends React.Component {
-  
+
   constructor(props){
     super(props);
     this.state = {
-      locations: [],
-      renderLocations: true
+      locations: []
     }
   }
-  
-  async componentDidMount(){
+
+ async componentDidMount(){
     setTimeout(() => {
       this.getSavedLocations();
     }, 1000);
   }
+
+
+handleLocationDelete = async (locationToDelete) => {
+  try {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+
+      let testPacket = {
+        id: this.props._id
+      }
+
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'DELETE',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
+        data: testPacket
+      }
+      
+      const locationResponse = await axios(config);
+     
+      console.log(locationResponse.status);
+
+      const filteredLocations = this.state.locations.filter(location => {
+        return location._id !== locationToDelete._id;
+      })
+
+      this.setState({
+        locations: filteredLocations
+      })      
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+handleUpdateNote = async(noteToUpdate) => {
+  try {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+
+      let testPacket = {
+        id: this.props._id
+      }
+
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'PUT',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
+        data: testPacket
+      }
+      
+      const locationResponse = await axios(config);
+     
+      console.log(locationResponse.status);
+    
+      let updatedLocationArray = this.state.locations.map(existingLocation => {
+        return existingLocation._id === noteToUpdate._id
+        ? locationResponse.data
+        : existingLocation
+      });
+      this.setState({
+        locations: updatedLocationArray
+      });
+    } 
+  }catch(error){
+    console.log('error in updateLocation', error.response);
+  }
+}
+    
+
 
   handleLocationDelete = async (locationToDelete) => {
     try {
@@ -75,9 +148,7 @@ class App extends React.Component {
     if(this.props.auth0.isAuthenticated){
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
-      
-      //Use this to get token for thunderclient
-      //console.log('token for thunderclient: ', jwt);
+
 
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
@@ -88,8 +159,6 @@ class App extends React.Component {
       
       const locationResponse = await axios(config);
 
-      console.log('getSavedLocations: ', locationResponse.data);
-      
       this.setState({
         locations: locationResponse.data
       });
@@ -106,7 +175,9 @@ class App extends React.Component {
     console.log(this.props.auth0);
     let mapLocations = this.state.locations.map((location) => (
 
+
       <PlaceCard key={location._id}
+
         location={location}
         handleDelete={this.handleDelete}
         updateLocations={this.updateLocations}

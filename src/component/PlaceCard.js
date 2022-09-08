@@ -36,10 +36,14 @@ class PlaceCard extends React.Component {
           </div>
           <div className="right-panel box">
               <Container style={{ display: "inline" }}>
-                <Button >Delete Location</Button>
+                <Button 
+                  onClick={ () => this.props.handleLocationDelete(this.props.location)}>Delete Location
+                </Button>
               </Container>
               <Container style={{ display: "inline" }}>
-                <Button>Save Note</Button>
+                <Button 
+                  onClick={ () => this.props.handleUpdateNote(this.props.location)}>Save Note
+                </Button>
               </Container>
               <TextArea  />
           </div>
