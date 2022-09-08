@@ -25,8 +25,7 @@ class SavedLocations extends React.Component{
         baseURL: process.env.REACT_APP_SERVER,
         url: '/location'
       }
-      
-      console.log(config);
+
       const locationResponse = await axios(config);
 
       console.log('Response: ', locationResponse.data);
