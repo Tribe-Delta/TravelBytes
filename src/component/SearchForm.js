@@ -1,7 +1,8 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
-import axios from 'axios'
+import axios from 'axios';
+import '../css/SearchForm.css';
 
 class SearchForm extends React.Component{
 
@@ -60,7 +61,7 @@ class SearchForm extends React.Component{
     return(
       <div className="master-form">
         <Form>
-          <Form.Control size="lg" type="text" placeholder="Large text" onChange={this.handleOnChange} />
+          <Form.Control  size="lg" type="text" placeholder="Large text" onChange={this.handleOnChange} />
         </Form>
 
         {this.state.listItems.length ? (

@@ -1,6 +1,9 @@
 import React from "react";
 import '../css/About.css';
-import brian from '../img/brianphoto.jpeg';
+import brian from '../img/brian.png';
+import dan from '../img/dan.png';
+import stephen from '../img/stephen.png';
+import timothee from '../img/timothee.jpg';
 
 // format from https://codepen.io/susegroj/pen/gwbypN
 
@@ -11,13 +14,13 @@ render(){
     <div class="container">
     <div class="main">
         <div class="front green">
-            <i class="fa fa-user fa-5x icon"></i>
-            <div class="">Katy Smith</div>
+        <img class="smile" src={dan} alt="Dan's charming face" height="45%"></img>
+            <div class="">Dan Awesome</div>
             <div class="data-wrapper">
                 <div class="circle"><i class="fa fa-code"></i></div>
                 <div class="data">
                     <span class="title">Full-Stack Developer</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur i!</p>
+                    <p>Hobbies:</p>
                 </div>
             </div>
         </div>
@@ -30,9 +33,8 @@ render(){
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span class="tech">Java Core</span>
+                    <span class="tech">C#</span>
                 </div>
                <div class="skill-ele">
                    <div class="stars">
@@ -40,16 +42,7 @@ render(){
                        <i class="fa fa-star" aria-hidden="true"></i>
                        <i class="fa fa-star" aria-hidden="true"></i>
                        <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
                    </div>
-                    <span class="tech">CSS3</span>
-                </div>
-                <div class="skill-ele">
-                    <div class="stars">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
                     <span class="tech">JavaScript</span>
                 </div>
                 <div class="skill-ele">
@@ -57,8 +50,17 @@ render(){
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span class="tech">Django</span>
+                    <span class="tech">Unity</span>
+                </div>
+                <div class="skill-ele">
+                    <div class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span class="tech">React</span>
                 </div>
                 <div class="skill-ele">
                     <div class="stars">
@@ -70,20 +72,24 @@ render(){
                 </div>
             </div>
             <div class="social">
-                <i class="fa fa-2x fa-github"></i>
+            <a href="https://github.com/Dawesome101" >
+                <i class="fa fa-2x fa-github" ></i>
+              </a> 
+              <a href="https://www.linkedin.com/in/daniel-awesome/" >
                 <i class="fa fa-2x fa-linkedin-square"></i>
+              </a> 
             </div>
         </div>
     </div>
     <div class="main">
         <div class="front green">
-            <i class="fa fa-user fa-5x icon"></i>
-            <div class="">Katy Smith</div>
+        <img class="smile" src={stephen} alt="a better man i have yet to meet" height="45%"></img>
+            <div class="">Stephen Clemmer</div>
             <div class="data-wrapper">
                 <div class="circle"><i class="fa fa-code"></i></div>
                 <div class="data">
                     <span class="title">Full-Stack Developer</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur i!</p>
+                    <p>Hobbies: </p>
                 </div>
             </div>
         </div>
@@ -136,20 +142,24 @@ render(){
                 </div>
             </div>
             <div class="social">
-                <i class="fa fa-2x fa-github"></i>
+            <a href="https://github.com/stephenclemmer" >
+                <i class="fa fa-2x fa-github" ></i>
+              </a> 
+              <a href="https://www.linkedin.com/in/stephen-clemmer/" >
                 <i class="fa fa-2x fa-linkedin-square"></i>
+              </a> 
             </div>
         </div>
     </div>
     <div class="main">
         <div class="front green">
-            <i class="fa fa-user fa-5x icon"></i>
-            <div class="">Katy Smith</div>
+        <img class="smile" src={timothee} alt="Timothee outdresses all of us easily" height="45%"></img>
+            <div class="">Timothee Odushina</div>
             <div class="data-wrapper">
                 <div class="circle"><i class="fa fa-code"></i></div>
                 <div class="data">
                     <span class="title">Full-Stack Developer</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur i!</p>
+                    <p>Hobbies: </p>
                 </div>
             </div>
         </div>
@@ -161,27 +171,15 @@ render(){
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span class="tech">Java Core</span>
+                    <span class="tech">React</span>
                 </div>
                <div class="skill-ele">
                    <div class="stars">
                        <i class="fa fa-star" aria-hidden="true"></i>
                        <i class="fa fa-star" aria-hidden="true"></i>
                        <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
                    </div>
-                    <span class="tech">CSS3</span>
-                </div>
-                <div class="skill-ele">
-                    <div class="stars">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
                     <span class="tech">JavaScript</span>
                 </div>
                 <div class="skill-ele">
@@ -190,7 +188,7 @@ render(){
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span class="tech">Django</span>
+                    <span class="tech">Git</span>
                 </div>
                 <div class="skill-ele">
                     <div class="stars">
@@ -198,18 +196,30 @@ render(){
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span class="tech">New Skill</span>
+                    <span class="tech">GitHub</span>
+                </div>
+                <div class="skill-ele">
+                    <div class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span class="tech">VSCode</span>
                 </div>
             </div>
             <div class="social">
-                <i class="fa fa-2x fa-github"></i>
+            <a href="https://github.com/timothee2022" >
+                <i class="fa fa-2x fa-github" ></i>
+              </a> 
+              <a href="https://www.linkedin.com/in/hsp20tim/" >
                 <i class="fa fa-2x fa-linkedin-square"></i>
+              </a> 
             </div>
         </div>
     </div>
     <div class="main">
         <div class="front">
-        <img class="smile" src={brian} alt="brian" height="50%"></img>
+        <img class="smile" src={brian} alt="just brian, that's about it" height="45%"></img>
             <div class="">Brian Sward</div>
             <div class="data-wrapper">
                 <div class="circle"><i class="fa fa-code"></i></div>
