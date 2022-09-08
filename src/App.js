@@ -4,9 +4,12 @@ import Login from './Login.js'
 import Logout from './Logout.js'
 import Profile from './Profile.js'
 import SearchFrom from './component/SearchForm.js'
-import Content from './Content.js';
 import Map from './component/Map.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/App.css';
+import { Route, Routes } from "react-router-dom";
+import About from './component/About.js';
+import Header from './component/Header.js';
 import './css/App.css';
 
 class App extends React.Component {
@@ -32,18 +35,26 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>This is the page.</p>
+        {/* <p>This is the page.</p> */}
         {this.props.auth0.isAuthenticated ? 
           <>
-            <Profile />
-            {/* <Content /> */}
-            <Logout />
-            <SearchFrom handleLatLng={this.handleLatLng}/>
-            <Map lat={this.state.lat} lon={this.state.lng}/>
+            <Header />
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/" element={
+                <>
+                <Profile />
+                <Logout />
+                <SearchFrom handleLatLng={this.handleLatLng}/>
+                <Map lat={this.state.lat} lon={this.state.lng}/>
+                </>
+              }/>
+            </Routes>
           </>
           :
           <Login />
         }
+
       </div>
     );
   }
