@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import '../css/TextArea.css';
 
 class TextArea extends React.Component {
   constructor(props) {
@@ -24,13 +25,10 @@ class TextArea extends React.Component {
               placeholder={this.props.location.notes}
               as="textarea" 
 
-              rows={4}
+              rows={10}
               className='form-control'
-              margin='0'
-              margin-top='0'
-              padding='0'
               />
-              <Button type="submit">
+              <Button className='note-button' type="submit">
               Save Notes
               </Button>
             </Form.Group>
