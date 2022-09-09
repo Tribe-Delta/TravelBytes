@@ -16,6 +16,7 @@ A group project to create a travel information website which can supply the user
 ![Data Flow](./img/TravelBytesFlow.jpg)
 
 ## Wireframes
+
 [Home Page](https://wireframe.cc/gGveoX)
 ![Home Page](./img/HomePageWire.png)
 
@@ -29,7 +30,7 @@ A group project to create a travel information website which can supply the user
 - [chart info obtained here](https://www.skyscanner.net/news/international-travel-plug-adapter-guide)
 - plugs.png is borrowed from their site used as well
 
-# Travel Bytes
+## Travel Bytes
 
 Connecting people with places before they go so they don't arrive unprepared.
 
