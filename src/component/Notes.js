@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react';
+import '../css/Notes.css';
 
 class Notes extends React.Component{
 
@@ -35,6 +36,7 @@ class Notes extends React.Component{
     }
   }
 
+
   render(){
     return(
     <Form onSubmit={this.handleSubmit}>
@@ -45,9 +47,9 @@ class Notes extends React.Component{
           Keep track of any location specifics you want to remeber.
         </Form.Text>
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <button className="notes-button" type="submit">
         Save Location
-      </Button>
+      </button>
     </Form>
     )
   }

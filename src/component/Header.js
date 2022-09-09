@@ -11,7 +11,19 @@ render(){
     <>
     <div className="header-root">
       <div className="title-list">
-        <h1 className ="header_h1">TravelBytes</h1>
+        <h1 className ="header_h1">
+            <p style={{color: "#011F26"}}>T
+              <span style={{color: "#034001"}}>
+              ravel
+              </span>
+              <span style={{color: "#011F26"}}>
+              B
+              </span>
+              <span style={{color: "#034001"}}>
+              ytes
+              </span>
+            </p>
+            </h1>
         <ul className ="header_ul">
           <li className="header_li" >
             <Link to="/">Home</Link>

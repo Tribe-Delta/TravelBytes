@@ -13,7 +13,7 @@ class PlaceCard extends React.Component {
   
   render() {
     return (
-      <div className="container">
+      <div className="content-container">
         <div className="row">
             <div className="left-panel box">
                 <h3>{this.props.location.city}, {this.props.location.state}, {this.props.location.country}</h3>
