@@ -24,15 +24,12 @@ class TextArea extends React.Component {
             className="mb-3"
           >
             <Form.Group controlId="updateNoteControl">
-              <Form.Control _id={this.props.location._id}
+              <Form.Control 
+              _id={this.props.location._id}
+              className='form-control'
+              as="textarea"
               defaultValue={this.state.message}
               onChange={ () => this.handleChange()}
-              as="textarea" 
-              rows={4}
-              className='form-control'
-              margin='0'
-              margin-top='0'
-              padding='0'
               />
               <Button type="submit">
               Save Notes
