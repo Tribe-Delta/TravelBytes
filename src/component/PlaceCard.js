@@ -16,7 +16,7 @@ class PlaceCard extends React.Component {
       <div className="content-container">
         <div className="row">
             <div className="left-panel box">
-                <h3>{this.props.location.city}, {this.props.location.state}, {this.props.location.country}</h3>
+                <h3>{this.props.location.city}</h3>
                 <ul>
                 <li>Timezone: {this.props.location.timezone}</li>
                 <li>Currency: {this.props.location.currencySymbol}, {this.props.location.currency}</li>
