@@ -1,11 +1,24 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+import LocationSavedModal from './LocationSavedModal.js'
 import { withAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 import '../css/Notes.css';
 
 class Notes extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      showSaveLocationModal: false
+    };
+  }
+
+  handleSaveLocationModal = (showModal) => {
+    this.setState({
+      showSaveLocationModal: showModal
+    })
+  }
 
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,6 +42,8 @@ class Notes extends React.Component{
 
         await axios(config);
 
+        this.handleSaveLocationModal(true);
+
         this.props.getSavedLocations();
       }
     } catch(error) {
@@ -36,21 +51,26 @@ class Notes extends React.Component{
     }
   }
 
-
   render(){
     return(
-    <Form onSubmit={this.handleSubmit}>
-      <Form.Group className="mb-3" controlId="formNotes">
-        <Form.Label>Notes</Form.Label>
-        <Form.Control type="text" placeholder="Add notes for this location:" />
-        <Form.Text className="text-muted">
-          Keep track of any location specifics you want to remeber.
-        </Form.Text>
-      </Form.Group>
-      <button className="notes-button" type="submit">
-        Save Location
-      </button>
-    </Form>
+      <>
+        <LocationSavedModal 
+          showSaveLocationModal={this.state.showSaveLocationModal} 
+          handleSaveLocationModal={this.handleSaveLocationModal}
+        />
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group className="mb-3" controlId="formNotes">
+            <Form.Label>Notes</Form.Label>
+            <Form.Control type="text" placeholder="Add notes for this location:" />
+            <Form.Text className="text-muted">
+              Keep track of any location specifics you want to remeber.
+            </Form.Text>
+          </Form.Group>
+          <button className="notes-button" type="submit">
+            Save Location
+          </button>
+        </Form>
+      </>
     )
   }
 }
