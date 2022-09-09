@@ -16,15 +16,14 @@ A group project to create a travel information website which can supply the user
 ![Data Flow](./img/TravelBytesFlow.jpg)
 
 ## Wireframes
+
 [Home Page](https://wireframe.cc/gGveoX)
 ![Home Page](./img/HomePageWire.png)
 
 [About Us](https://wireframe.cc/GbVnTK)
 ![About Us](./img/AboutUsWire.png)
 
-## Resources
-
-# Travel Bytes
+## Travel Bytes
 
 Connecting people with places before they go so they don't arrive unprepared.
 
@@ -53,12 +52,16 @@ Mapbox API
 RestCountries API
 LocationIQ API
 
-### Stretch Goals
+## Stretch Goals
 
-#### Plug Data Resources
+### Plug Data Resources
+
 Type of plug in each country:
+
 - [chart info obtained here](https://www.skyscanner.net/news/international-travel-plug-adapter-guide)
+
 - plugs.png is borrowed from their site used as well
 
-#### The exchange rate for each country
+### The exchange rate for each country
+
 ExchangeRate-API
