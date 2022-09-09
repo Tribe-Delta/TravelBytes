@@ -9,14 +9,16 @@ import About from './component/About.js';
 import Header from './component/Header.js';
 import PlaceCard from './component/PlaceCard.js';
 import Footer from './component/Footer.js';
+import NotesModal from './component/NotesModal.js'
 import axios from 'axios';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      locations: []
+      locations: [],
+      showNotesModal: false
+      
     }
   }
 
@@ -48,57 +50,46 @@ class App extends React.Component {
 
   handleUpdateNote = async(event, noteLocation) => {
     event.preventDefault();
-    console.log(event.target.elements.updateNoteControl.value);
-    console.log(noteLocation.city);
-    if (this.props.auth0.isAuthenticated) {
-      const res = await this.props.auth0.getIdTokenClaims();
-      const jwt = res.__raw;
-      
-      let packet = {
-        city: noteLocation.city,
-        notes: event.target.elements.updateNoteControl.value
-      }
-      const config = {
-        headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'PUT',
-        baseURL: process.env.REACT_APP_SERVER,
-        url: `/location/${noteLocation._id}`,
-        data: packet
-      }
-      
-      console.log('you are leaving the put function');
-      await axios(config);
-
-      // const filteredLocations = this.state.locations.filter(location => {
-      //   return location._id !== noteLocation._id;
-      // })
-
-      // this.setState({
-      //   locations: filteredLocations
-      // })
-
-      this.getSavedLocations();
-    }
-  }
-
-  handleLocationDelete = async (locationToDelete) => {
-    // console.log('you are in the delete function?');
-    try {
+    try{
       if (this.props.auth0.isAuthenticated) {
         const res = await this.props.auth0.getIdTokenClaims();
         const jwt = res.__raw;
         
-        // let testPacket = {
-        //   id: locationToDelete._id
-        // }
-        // console.log(testPacket.id);
+        let packet = {
+          city: noteLocation.city,
+          notes: event.target.elements.updateNoteControl.value
+        }
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          method: 'PUT',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: `/location/${noteLocation._id}`,
+          data: packet
+        }
         
+        console.log('you are leaving the put function');
+        await axios(config);
+        
+        this.handleNotesModal(true);
+
+        this.getSavedLocations();
+      }
+    } catch(error) {
+      console.log("There was an error inside handleUpdateNote")
+    }
+  }
+
+  handleLocationDelete = async (locationToDelete) => {
+    try {
+      if (this.props.auth0.isAuthenticated) {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+
         const config = {
           headers: { "Authorization": `Bearer ${jwt}` },
           method: 'DELETE',
           baseURL: process.env.REACT_APP_SERVER,
           url: `/location/${locationToDelete._id}`
-         
         }
         
         console.log('you are leaving the delete function then');
@@ -122,6 +113,12 @@ class App extends React.Component {
     }
   }
 
+  handleNotesModal = (showModal) => {
+    this.setState({
+      showNotesModal: showModal
+    });
+  }
+
   render() {
     let mapLocations = this.state.locations.map((location) => (
 
@@ -137,12 +134,15 @@ class App extends React.Component {
         {this.props.auth0.isAuthenticated ?
           <>
             <Header />
+            <NotesModal 
+              showNotesModal={this.state.showNotesModal} 
+              handleNotesModal={this.handleNotesModal}
+            />
             <Routes>
               <Route path="/about" element={<About className="test-test" />} />
               <Route path="/" element={
                 <>
                   <Map getSavedLocations={this.getSavedLocations}/>
-
                   {this.state.locations.length ? (
                     <div className="location-cnt">
                       {mapLocations}

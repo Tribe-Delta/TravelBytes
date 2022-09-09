@@ -9,8 +9,12 @@ class TextArea extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      message: this.props.location.notes
     };
+  }
+
+  handleChange = event => {
+    this.setState({message: event.target.value})
   }
 
   render() {
@@ -20,13 +24,15 @@ class TextArea extends React.Component {
             onSubmit={(e) => this.props.handleUpdateNote(e, this.props.location)}
             className="mb-3"
           >
-            <Form.Group controlId="updateNoteControl">
-              <Form.Control _id={this.props.location._id}
-              placeholder={this.props.location.notes}
-              as="textarea" 
-
-              rows={10}
-              className='form-control'
+            <Form.Group 
+                controlId="updateNoteControl">
+                rows={10}
+                <Form.Control 
+                _id={this.props.location._id}
+                className='form-control'
+                as="textarea"
+                defaultValue={this.state.message}
+                onChange={ () => this.handleChange()}
               />
               <Button className='note-button' type="submit">
               Save Notes
