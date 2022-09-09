@@ -17,7 +17,7 @@ class SavedLocations extends React.Component{
       const jwt = res.__raw;
 
       //Use this to get token for thunderclient
-      console.log('token for thunderclient: ', jwt);
+      // console.log('token for thunderclient: ', jwt);
 
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },

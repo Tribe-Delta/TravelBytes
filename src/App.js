@@ -24,7 +24,7 @@ class App extends React.Component {
  async componentDidMount(){
    setTimeout(() => {
       this.getSavedLocations();
-    }, 1000);
+    }, 2000);
   }
 
 
@@ -53,71 +53,81 @@ class App extends React.Component {
   }
 
   
-  handleUpdateNote = async(noteToUpdate) => {
+  handleUpdateNote = async() => {
+    // event.preventDefault();
     try {
-      if(this.props.auth0.isAuthenticated){
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
-  
-        let testPacket = {
-          id: this.props._id
-        }
-  
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'PUT',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-          data: testPacket
-        }
-        
-        const locationResponse = await axios(config);
-       
-        console.log(locationResponse.status);
+      // console.log(event.target);
       
-        let updatedLocationArray = this.state.locations.map(existingLocation => {
-          return existingLocation._id === noteToUpdate._id
-          ? locationResponse.data
-          : existingLocation
-        });
+      // console.log('you are in the update function?');
+      // // console.log(noteToUpdate._id)
+      // if(this.props.auth0.isAuthenticated){
+      //   const res = await this.props.auth0.getIdTokenClaims();
+      //   const jwt = res.__raw;
+  
+      //   let testPacket = {
+      //     city: updatedNote.city,
+      //     notes: event.target.value
+      //   }
+  
+      //   const config = {
+      //     headers: { "Authorization": `Bearer ${jwt}` },
+      //     method: 'PUT',
+      //     baseURL: process.env.REACT_APP_SERVER,
+      //     url: `/location/${updatedNote._id}`
+      //   }
+      //   console.log('+++++++++++++++');
+      //   console.log(updatedNote);
+        
+      //   const locationResponse = await axios(config);
+       
+      //   console.log(locationResponse.status);
+      
+      //   let updatedLocationArray = this.state.locations.map(existingLocation => {
+      //     return existingLocation._id === updatedNote._id
+      //     ? locationResponse.data
+      //     : existingLocation
+      //   });
 
-        this.setState({
-          locations: updatedLocationArray
-        });
+      //   this.setState({
+      //     locations: updatedLocationArray
+      //   });
 
-        this.getSavedLocations();
-      } 
+      //   this.getSavedLocations();
+      // } 
     }catch(error){
       console.log('error in updateLocation', error.response);
     }
   }
 
   handleLocationDelete = async (locationToDelete) => {
+    // console.log('you are in the delete function?');
     try {
       if (this.props.auth0.isAuthenticated) {
         const res = await this.props.auth0.getIdTokenClaims();
         const jwt = res.__raw;
-
-        let testPacket = {
-          id: this.props._id
-        }
-
+        
+        // let testPacket = {
+        //   id: locationToDelete._id
+        // }
+        // console.log(testPacket.id);
+        
         const config = {
           headers: { "Authorization": `Bearer ${jwt}` },
           method: 'DELETE',
           baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-          data: testPacket
+          url: `/location/${locationToDelete._id}`
+         
         }
-
+        
+        console.log('you are leaving the delete function then');
         const locationResponse = await axios(config);
-
+        
         console.log(locationResponse.status);
-
+        
         const filteredLocations = this.state.locations.filter(location => {
           return location._id !== locationToDelete._id;
         })
-
+        
         this.setState({
           locations: filteredLocations
         })
@@ -131,14 +141,14 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props.auth0);
+    // console.log(this.props.auth0);
     let mapLocations = this.state.locations.map((location) => (
 
       <PlaceCard 
         key={location._id}
         location={location}
-        handleDelete={this.handleDelete}
-        updateLocations={this.updateLocations}
+        handleLocationDelete={this.handleLocationDelete}
+        handleUpdateNote={this.handleUpdateNote}
       />
     ));
     return (
