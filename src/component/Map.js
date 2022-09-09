@@ -4,8 +4,6 @@ import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-load
 import SearchForm from './SearchForm.js';
 import Notes from './Notes.js';
 import '../css/Map.css';
-import axios from 'axios';
-
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGF3ZXNvbWUxMDEiLCJhIjoiY2w3bDE3dm5mMGc1dTN1cDNycXdmdTQ0MiJ9.OrMfNkMRgODodzN9f15WXw';
 
@@ -31,7 +29,6 @@ class Map extends React.Component {
     });
   }
   
-
   updateMap = (lng, lat) => {
     const map = new mapboxgl.Map({
       container: this.mapContainer.current,
@@ -41,7 +38,7 @@ class Map extends React.Component {
     });
   }
 
-  updateSelectedCity = (cityName) =>{
+  updateSelectedCity = (cityName) => {
     console.log(cityName);
     this.setState({
       cityName: cityName
@@ -58,7 +55,7 @@ class Map extends React.Component {
         <div ref={this.mapContainer} className="map-container" />
         
         <div className='note-box'>
-        <Notes cityName={this.state.cityName} />
+        <Notes cityName={this.state.cityName} getSavedLocations={this.props.getSavedLocations} />
         </div>
 
       </div>
@@ -67,5 +64,4 @@ class Map extends React.Component {
   }
 }
 
-//export default Map;
 export default withAuth0(Map);

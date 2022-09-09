@@ -11,7 +11,6 @@ import PlaceCard from './component/PlaceCard.js';
 import Footer from './component/Footer.js';
 import axios from 'axios';
 
-
 class App extends React.Component {
 
   constructor(props) {
@@ -23,36 +22,30 @@ class App extends React.Component {
 
  async componentDidMount(){
    setTimeout(() => {
-      this.getSavedLocations();
+     this.getSavedLocations();
     }, 1000);
   }
 
+ getSavedLocations = async() => {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
 
-  async getSavedLocations() {
-    try{
-      if(this.props.auth0.isAuthenticated){
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
-  
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'get',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-        }
-        
-        const locationResponse = await axios(config);
-  
-        this.setState({
-          locations: locationResponse.data
-        });
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'get',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
       }
-    } catch(error){
-      console.log('error in getSavedLocations: ', error.response);
+      
+      const locationResponse = await axios(config);
+
+      this.setState({
+        locations: locationResponse.data
+      });
     }
   }
 
-  
   handleUpdateNote = async(noteToUpdate) => {
     try {
       if(this.props.auth0.isAuthenticated){
@@ -131,7 +124,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props.auth0);
     let mapLocations = this.state.locations.map((location) => (
 
       <PlaceCard 
@@ -150,7 +142,8 @@ class App extends React.Component {
               <Route path="/about" element={<About className="test-test" />} />
               <Route path="/" element={
                 <>
-                  <Map />
+                  <Map getSavedLocations={this.getSavedLocations}/>
+
                   {this.state.locations.length ? (
                     <div className="location-cnt">
                       {mapLocations}
