@@ -1,9 +1,11 @@
 .content-container {
   padding: 1.5%;
-  
+  height: max-content;
   font-size: 12;
   margin-bottom: 5px;
-  
+  background-color: #5c7373;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 10px;
 }
 
 .right-panel {
@@ -11,10 +13,11 @@
   padding-bottom: 10px;
   display: inline-block;
   background-color: #5c7373;
-  width: 50%;
+  width: 35%;
   font-size: 16;
   border-radius: 0 20px 20px 0;
-  
+  margin:auto;
+  height: fit-content;
   
  }
 
@@ -23,7 +26,7 @@
   padding-bottom: 10px;
   display: inline-block;
   background-color: #5c7373;
-  width: 30%;
+  width: 45%;
 }
 .left-panel {
   padding-top: 10px;
@@ -36,24 +39,13 @@
 }
 
 .row {
+  
   display: flex;
   height: 100%;
 }
 
-
-.left-panel {
-  display: inline-block;
-  background-color: #5c7373;
-  width: 20%;
-  color: white;
-}
-
-.row {
-  display: flex;
-  /* height: 100%; */
-}
 .note-button {
-  margin:5px 0 0 0 ;
+  /* margin:5px 0 0 0 ; */
   background-color: #034001;
   border-color: #027368;
   width: 80%;

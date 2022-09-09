@@ -12,6 +12,7 @@ body {
   padding: 50px;
   width: fit-content;
   margin-bottom: 10px;
+  margin:auto;
 }
 .main {
   display: flex;

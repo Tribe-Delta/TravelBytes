@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import '../css/TextArea.css';
 
 class TextArea extends React.Component {
   constructor(props) {
@@ -23,15 +24,17 @@ class TextArea extends React.Component {
             onSubmit={(e) => this.props.handleUpdateNote(e, this.props.location)}
             className="mb-3"
           >
-            <Form.Group controlId="updateNoteControl">
-              <Form.Control 
-              _id={this.props.location._id}
-              className='form-control'
-              as="textarea"
-              defaultValue={this.state.message}
-              onChange={ () => this.handleChange()}
+            <Form.Group 
+                controlId="updateNoteControl">
+                rows={10}
+                <Form.Control 
+                _id={this.props.location._id}
+                className='form-control'
+                as="textarea"
+                defaultValue={this.state.message}
+                onChange={ () => this.handleChange()}
               />
-              <Button type="submit">
+              <Button className='note-button' type="submit">
               Save Notes
               </Button>
             </Form.Group>
