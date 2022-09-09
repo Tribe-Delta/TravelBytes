@@ -46,48 +46,38 @@ class App extends React.Component {
     }
   }
 
-  handleUpdateNote = async() => {
-    try {
-      // console.log(event.target);
+  handleUpdateNote = async(event, noteLocation) => {
+    event.preventDefault();
+    console.log(event.target.elements.updateNoteControl.value);
+    console.log(noteLocation.city);
+    if (this.props.auth0.isAuthenticated) {
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
       
-      // console.log('you are in the update function?');
-      // // console.log(noteToUpdate._id)
-      // if(this.props.auth0.isAuthenticated){
-      //   const res = await this.props.auth0.getIdTokenClaims();
-      //   const jwt = res.__raw;
-  
-      //   let testPacket = {
-      //     city: updatedNote.city,
-      //     notes: event.target.value
-      //   }
-  
-      //   const config = {
-      //     headers: { "Authorization": `Bearer ${jwt}` },
-      //     method: 'PUT',
-      //     baseURL: process.env.REACT_APP_SERVER,
-      //     url: `/location/${updatedNote._id}`
-      //   }
-      //   console.log('+++++++++++++++');
-      //   console.log(updatedNote);
-        
-      //   const locationResponse = await axios(config);
-       
-      //   console.log(locationResponse.status);
+      let packet = {
+        city: noteLocation.city,
+        notes: event.target.elements.updateNoteControl.value
+      }
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'PUT',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: `/location/${noteLocation._id}`,
+        data: packet
+      }
       
-      //   let updatedLocationArray = this.state.locations.map(existingLocation => {
-      //     return existingLocation._id === updatedNote._id
-      //     ? locationResponse.data
-      //     : existingLocation
-      //   });
+      console.log('you are leaving the put function');
+      await axios(config);
 
-      //   this.setState({
-      //     locations: updatedLocationArray
-      //   });
+      // const filteredLocations = this.state.locations.filter(location => {
+      //   return location._id !== noteLocation._id;
+      // })
 
-      //   this.getSavedLocations();
-      // } 
-    }catch(error){
-      console.log('error in updateLocation', error.response);
+      // this.setState({
+      //   locations: filteredLocations
+      // })
+
+      this.getSavedLocations();
     }
   }
 

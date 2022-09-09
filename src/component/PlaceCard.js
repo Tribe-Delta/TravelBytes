@@ -38,7 +38,7 @@ class PlaceCard extends React.Component {
                   <TextArea 
                     className='note-box'
                     handleUpdateNote={this.props.handleUpdateNote}  
-                    textLoaction={this.props.location}
+                    location={this.props.location}
                     />
                 </div>
                 
