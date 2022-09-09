@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import LocationSavedModal from './LocationSavedModal.js'
 import { withAuth0 } from '@auth0/auth0-react';

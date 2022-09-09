@@ -9,11 +9,12 @@ import { BrowserRouter as Router} from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0Provider
-  domain={process.env.REACT_APP_DOMAIN}
-  clientId={process.env.REACT_APP_CLIENTID}
-  redirectUri={window.location.origin}>
-      <Router>
-        <App />
-      </Router>
+    domain={process.env.REACT_APP_DOMAIN}
+    clientId={process.env.REACT_APP_CLIENTID}
+    redirectUri={window.location.origin}
+  >
+    <Router>
+      <App />
+    </Router>
   </Auth0Provider>
 );
