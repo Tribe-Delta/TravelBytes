@@ -17,7 +17,7 @@ class Notes extends React.Component{
         cityName: this.props.cityName,
         notes: event.target.elements.formNotes.value
       }
-      console.log(postPacket);
+      // console.log(postPacket);
 
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
