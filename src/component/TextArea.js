@@ -22,13 +22,7 @@ class TextArea extends React.Component {
             <Form.Group controlId="updateNoteControl">
               <Form.Control _id={this.props.location._id}
               placeholder={this.props.location.notes}
-              as="textarea" 
-
-              rows={4}
-              className='form-control'
-              margin='0'
-              margin-top='0'
-              padding='0'
+              as="textarea"
               />
               <Button type="submit">
               Save Notes
