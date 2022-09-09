@@ -5,7 +5,7 @@ import dan from '../img/dan.png';
 import stephen from '../img/stephen.png';
 import timothee from '../img/timothee.jpg';
 
-// format from https://codepen.io/susegroj/pen/gwbypN
+// credit to https://codepen.io/susegroj/pen/gwbypN for template
 
 class About extends React.Component
 {
