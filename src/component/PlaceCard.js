@@ -35,11 +35,15 @@ class PlaceCard extends React.Component {
             </div>
             <div className="right-panel box">
                 <div>
-                  <TextArea className='note-box'  />
+                  <TextArea 
+                    className='note-box'
+                    handleUpdateNote={this.props.handleUpdateNote}  
+                    textLoaction={this.props.location}
+                    />
                 </div>
                 
                 <div className='button-box'>
-                  <Button className='note-button' onClick={ () => this.props.handleUpdateNote(this.props.location)}>Save Note</Button>
+                  {/* <Button className='note-button' onClick={ () => this.props.handleUpdateNote(this.props.location)}>Save Note</Button> */}
                   <Button className='note-button'onClick={ () => this.props.handleLocationDelete(this.props.location)}>Delete Location</Button>
                 </div>
             </div>

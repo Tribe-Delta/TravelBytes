@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 
 class TextArea extends React.Component {
@@ -15,8 +16,11 @@ class TextArea extends React.Component {
   render() {
     return (
       <Container>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form className="mb-3">
+          <Form 
+            onSubmit={this.props.handleUpdateNote}
+            className="mb-3"
+          >
+        <Form.Group controlId="updateNoteControl">
               <Form.Control 
               placeholder="notes" 
               as="textarea" 
@@ -26,8 +30,12 @@ class TextArea extends React.Component {
               margin='0'
               margin-top='0'
               padding='0' />
-          </Form>
         </Form.Group>
+               <Button 
+                type="submit"
+                className='note-button'
+               >Save Note</Button>
+          </Form>
       </Container>
     );
   }
