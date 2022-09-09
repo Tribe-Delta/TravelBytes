@@ -25,10 +25,11 @@ class TextArea extends React.Component {
             className="mb-3"
           >
             <Form.Group 
-                controlId="updateNoteControl">
-                <Form.Control 
-                _id={this.props.location._id}
+              controlId="updateNoteControl"
+            >
+              <Form.Control 
                 rows={10}
+                _id={this.props.location._id}
                 className='form-control'
                 as="textarea"
                 defaultValue={this.state.message}

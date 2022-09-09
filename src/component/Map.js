@@ -21,7 +21,7 @@ class Map extends React.Component {
   }
 
   componentDidMount(){
-      const map = new mapboxgl.Map({
+      const map = new mapboxgl.Map({ // eslint-disable-line
       container: this.mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [this.state.lng, this.state.lat],
@@ -30,7 +30,7 @@ class Map extends React.Component {
   }
   
   updateMap = (lng, lat) => {
-    const map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({ // eslint-disable-line
       container: this.mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],
@@ -39,7 +39,6 @@ class Map extends React.Component {
   }
 
   updateSelectedCity = (cityName) => {
-    console.log(cityName);
     this.setState({
       cityName: cityName
     });
@@ -51,15 +50,11 @@ class Map extends React.Component {
         <div className='search'>
           <SearchForm updateMap={this.updateMap} updateSelectedCity={this.updateSelectedCity}/>
         </div>
-
         <div ref={this.mapContainer} className="map-container" />
-        
-        <div className='note-box'>
-        <Notes cityName={this.state.cityName} getSavedLocations={this.props.getSavedLocations} />
-        </div>
-
+          <div className='note-box'>
+            <Notes cityName={this.state.cityName} getSavedLocations={this.props.getSavedLocations} />
+          </div>
       </div>
-  
     );
   }
 }

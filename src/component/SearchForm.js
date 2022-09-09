@@ -22,20 +22,14 @@ class SearchForm extends React.Component{
     let filteredList = [];
 
     filteredList = axResponse.data.features.map((searchResult) => {
-        return searchResult;
-      });
+      return searchResult;
+    });
 
     filteredList.length ? this.setState({listItems: filteredList}) : this.setState({listItems: []}); 
   }
 
   handleListItemClick = async(event) => {
-    // console.log('Location Clicked: ', event.target.attributes.cityname.textContent);
-    // console.log('ListItems:', this.state.listItems);
     event.preventDefault();
-
-    // this.setState = ({
-    //   cityName: event.target.attributes.cityname.textContent
-    // });
 
     this.props.updateSelectedCity(event.target.attributes.cityname.textContent);
 
@@ -48,20 +42,25 @@ class SearchForm extends React.Component{
   render(){
     let list = this.state.listItems.map((li, idx) => 
       <ListGroup.Item 
-      key={idx} 
-      lng={li.center[0]} 
-      lat={li.center[1]}
-      cityname={li.place_name}
-      action onClick={this.handleListItemClick}
+        key={idx} 
+        lng={li.center[0]} 
+        lat={li.center[1]}
+        cityname={li.place_name}
+        action onClick={this.handleListItemClick}
       >
-        {li.place_name} 
+      {li.place_name} 
       </ListGroup.Item>
     );
 
     return(
       <div className="master-form">
         <Form>
-          <Form.Control   type="text" placeholder="Enter Destination Here" onChange={this.handleOnChange} />
+          <Form.Control 
+            required
+            type="text" 
+            placeholder="Enter Destination Here" 
+            onChange={this.handleOnChange}
+          />
         </Form>
 
         {this.state.listItems.length ? (

@@ -18,7 +18,6 @@ class App extends React.Component {
     this.state = {
       locations: [],
       showNotesModal: false
-      
     }
   }
 
@@ -67,7 +66,6 @@ class App extends React.Component {
           data: packet
         }
         
-        console.log('you are leaving the put function');
         await axios(config);
         
         this.handleNotesModal(true);
@@ -92,10 +90,7 @@ class App extends React.Component {
           url: `/location/${locationToDelete._id}`
         }
         
-        console.log('you are leaving the delete function then');
-        const locationResponse = await axios(config);
-        
-        console.log(locationResponse.status);
+        await axios(config);
         
         const filteredLocations = this.state.locations.filter(location => {
           return location._id !== locationToDelete._id;
@@ -107,7 +102,6 @@ class App extends React.Component {
 
         this.getSavedLocations();
       }
-
     } catch (error) {
       console.log(error);
     }
@@ -121,7 +115,6 @@ class App extends React.Component {
 
   render() {
     let mapLocations = this.state.locations.map((location) => (
-
       <PlaceCard 
         key={location._id}
         location={location}

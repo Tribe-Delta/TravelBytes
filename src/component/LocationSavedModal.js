@@ -4,7 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 
 class LocationSavedModal extends React.Component{
 
-
   render(){
     return(
       <Modal

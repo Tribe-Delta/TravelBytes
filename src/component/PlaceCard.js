@@ -41,14 +41,12 @@ class PlaceCard extends React.Component {
                     handleUpdateNote={this.props.handleUpdateNote}
                     />
                 </div>
-                
                 <div className='button-box'>
                   <Button className='note-button'onClick={ () => this.props.handleLocationDelete(this.props.location)}>Delete Location</Button>
                 </div>
             </div>
         </div>
       </div>
-
     );
   }
 }
