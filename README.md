@@ -2,7 +2,7 @@
 
 ## Project Description
 
-A group project to create a travel information website which can supply the user with a variety of data provided from a selection of websites across the internet to aid travelers when they go abroad.
+A group project to create a travel information website which can supply the user with a variety of data provided from a selection of APIs across the internet to aid travelers when they go abroad.
 
 ## Group Members
 
@@ -24,11 +24,6 @@ A group project to create a travel information website which can supply the user
 
 ## Resources
 
-### Plug Data Resources
-
-- [chart info obtained here](https://www.skyscanner.net/news/international-travel-plug-adapter-guide)
-- plugs.png is borrowed from their site used as well
-
 # Travel Bytes
 
 Connecting people with places before they go so they don't arrive unprepared.
@@ -46,7 +41,24 @@ Sept. 09/05/2022
 ## Tools, Library's and Framework
 
 React.js  
-React-Bootstrap  
+React-Bootstrap
+Regex
 Auth0
-Axios  
+Axios
+Heroku
 Netlify - travelbytes.netlify.app
+MongoDB
+Mongoose
+Mapbox API
+RestCountries API
+LocationIQ API
+
+### Stretch Goals
+
+#### Plug Data Resources
+Type of plug in each country:
+- [chart info obtained here](https://www.skyscanner.net/news/international-travel-plug-adapter-guide)
+- plugs.png is borrowed from their site used as well
+
+#### The exchange rate for each country
+ExchangeRate-API
