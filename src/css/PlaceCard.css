@@ -1,9 +1,9 @@
 .content-container {
   padding: 1.5%;
-  height: 70vh;
-  background-color: black;
+  
   font-size: 12;
-  margin: 20px;
+  margin-bottom: 5px;
+  
 }
 
 .right-panel {
@@ -14,6 +14,8 @@
   width: 50%;
   font-size: 16;
   border-radius: 0 20px 20px 0;
+  
+  
  }
 
 .middle-panel {
@@ -53,6 +55,7 @@
 .note-button {
   margin:5px 0 0 0 ;
   background-color: #034001;
+  border-color: #027368;
   width: 80%;
   /* padding-left: 10px; */
 }
