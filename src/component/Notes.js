@@ -9,56 +9,33 @@ class Notes extends React.Component{
 
   handleSubmit = async (event) => {
     event.preventDefault();
+    try{
+      if(this.props.auth0.isAuthenticated){
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+  
+        let postPacket = {
+          cityName: this.props.cityName,
+          notes: event.target.elements.formNotes.value
+        }
 
-    if(this.props.auth0.isAuthenticated){
-      const res = await this.props.auth0.getIdTokenClaims();
-      const jwt = res.__raw;
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          method: 'POST',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/location',
+          data: postPacket
+        }
 
-      let postPacket = {
-        cityName: this.props.cityName,
-        notes: event.target.elements.formNotes.value
+        await axios(config);
+
+        this.props.getSavedLocations();
       }
-      console.log(postPacket);
-
-      const config = {
-        headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'POST',
-        baseURL: process.env.REACT_APP_SERVER,
-        url: '/location',
-        data: postPacket
-      }
-
-      const locationResponse = await axios(config);
+    } catch(error) {
+      console.log('error in handleSubmit', error.response);
     }
   }
 
-// await axios.post(url, {cityName: this.state.cityName })
-
-// async componentDidMount() {
-//     if(this.props.auth0.isAuthenticated){
-//       const res = await this.props.auth0.getIdTokenClaims();
-//       const jwt = res.__raw;
-
-//       //Use this to get token for thunderclient
-//       console.log('token for thunderclient: ', jwt);
-
-//       const config = {
-//         headers: { "Authorization": `Bearer ${jwt}` },
-//         method: 'get',
-//         baseURL: process.env.REACT_APP_SERVER,
-//         url: '/location'
-//       }
-      
-//       console.log(config);
-//       const locationResponse = await axios(config);
-
-//       console.log('Response: ', locationResponse.data);
-
-//       this.setState({
-//         locations: locationResponse.data
-//       });
-//     }
-//   }
 
   render(){
     return(

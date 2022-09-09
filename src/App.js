@@ -11,7 +11,6 @@ import PlaceCard from './component/PlaceCard.js';
 import Footer from './component/Footer.js';
 import axios from 'axios';
 
-
 class App extends React.Component {
 
   constructor(props) {
@@ -24,100 +23,93 @@ class App extends React.Component {
  async componentDidMount(){
    setTimeout(() => {
       this.getSavedLocations();
-    }, 1000);
+    }, 2000);
   }
 
+ getSavedLocations = async() => {
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
 
-  async getSavedLocations() {
-    try{
-      if(this.props.auth0.isAuthenticated){
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
-  
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'get',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-        }
-        
-        const locationResponse = await axios(config);
-  
-        this.setState({
-          locations: locationResponse.data
-        });
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'get',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/location',
       }
-    } catch(error){
-      console.log('error in getSavedLocations: ', error.response);
+      
+      const locationResponse = await axios(config);
+
+      this.setState({
+        locations: locationResponse.data
+      });
     }
   }
 
-  
-  handleUpdateNote = async(noteToUpdate) => {
-    try {
-      if(this.props.auth0.isAuthenticated){
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
-  
-        let testPacket = {
-          id: this.props._id
-        }
-  
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'PUT',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-          data: testPacket
-        }
-        
-        const locationResponse = await axios(config);
-       
-        console.log(locationResponse.status);
+  handleUpdateNote = async(event, noteLocation) => {
+    event.preventDefault();
+    console.log(event.target.elements.updateNoteControl.value);
+    console.log(noteLocation.city);
+    if (this.props.auth0.isAuthenticated) {
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
       
-        let updatedLocationArray = this.state.locations.map(existingLocation => {
-          return existingLocation._id === noteToUpdate._id
-          ? locationResponse.data
-          : existingLocation
-        });
+      let packet = {
+        city: noteLocation.city,
+        notes: event.target.elements.updateNoteControl.value
+      }
+      const config = {
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'PUT',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: `/location/${noteLocation._id}`,
+        data: packet
+      }
+      
+      console.log('you are leaving the put function');
+      await axios(config);
 
-        this.setState({
-          locations: updatedLocationArray
-        });
+      // const filteredLocations = this.state.locations.filter(location => {
+      //   return location._id !== noteLocation._id;
+      // })
 
-        this.getSavedLocations();
-      } 
-    }catch(error){
-      console.log('error in updateLocation', error.response);
+      // this.setState({
+      //   locations: filteredLocations
+      // })
+
+      this.getSavedLocations();
     }
   }
 
   handleLocationDelete = async (locationToDelete) => {
+    // console.log('you are in the delete function?');
     try {
       if (this.props.auth0.isAuthenticated) {
         const res = await this.props.auth0.getIdTokenClaims();
         const jwt = res.__raw;
-
-        let testPacket = {
-          id: this.props._id
-        }
-
+        
+        // let testPacket = {
+        //   id: locationToDelete._id
+        // }
+        // console.log(testPacket.id);
+        
         const config = {
           headers: { "Authorization": `Bearer ${jwt}` },
           method: 'DELETE',
           baseURL: process.env.REACT_APP_SERVER,
-          url: '/location',
-          data: testPacket
+          url: `/location/${locationToDelete._id}`
+         
         }
-
+        
+        console.log('you are leaving the delete function then');
         const locationResponse = await axios(config);
-
+        
         console.log(locationResponse.status);
-
+        
         const filteredLocations = this.state.locations.filter(location => {
           return location._id !== locationToDelete._id;
         })
-
+        
         this.setState({
           locations: filteredLocations
         })
@@ -131,14 +123,13 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props.auth0);
     let mapLocations = this.state.locations.map((location) => (
 
       <PlaceCard 
         key={location._id}
         location={location}
-        handleDelete={this.handleDelete}
-        updateLocations={this.updateLocations}
+        handleLocationDelete={this.handleLocationDelete}
+        handleUpdateNote={this.handleUpdateNote}
       />
     ));
     return (
@@ -150,7 +141,8 @@ class App extends React.Component {
               <Route path="/about" element={<About className="test-test" />} />
               <Route path="/" element={
                 <>
-                  <Map />
+                  <Map getSavedLocations={this.getSavedLocations}/>
+
                   {this.state.locations.length ? (
                     <div className="location-cnt">
                       {mapLocations}
